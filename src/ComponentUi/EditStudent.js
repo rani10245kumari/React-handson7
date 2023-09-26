@@ -29,64 +29,74 @@ const EditStudent = () => {
 
     return (
         <>
-            <form>
-                <table className="table1">
-                    <tr>
-                        <td>
-                            <label For="name">Name:</label>
-                        </td>
-                        <td>
-                            <input
-                                placeholder="Enter Name"
-                                name="name"
-                                onChange={handleChange}
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label For="age">Age:</label>
-                        </td>
-                        <td>
-                            <input
-                                placeholder="Enter age"
-                                name="age"
-                                onChange={handleChange}
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label For="course">Course:</label>
-                        </td>
-                        <td>
-                            <input
-                                placeholder="Enter Course"
-                                name="course"
-                                onChange={handleChange}
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label For="batch">Batch:</label>
-                        </td>
-                        <td>
-                            <input
-                                placeholder="Enter batch"
-                                name="batch"
-                                onChange={handleChange}
-                            />
-                        </td>
-                    </tr>
-                </table>
+            <form className="Addtable">
+
+
+                <fieldset className="form">
+                    <legend>NAME</legend>
+                    <label htmlFor="name" />
+                    <input
+                        type="text"
+                        id="name"
+                        name="Name"
+                        placeholder="Enter your name"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
+                <br></br>
+
+                <fieldset className="form">
+                    <legend>AGE</legend>
+                    <label htmlFor="age" />
+                    <input
+                        type="number"
+                        id="age"
+                        name="Age"
+                        placeholder="Enter your age"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
+                <br></br>
+                <fieldset className="form">
+                    <legend>COURSE</legend>
+                    <label htmlFor="name" />
+                    <input
+
+                        type="text"
+                        id="name"
+                        name="Course"
+                        placeholder="Enter your course"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
+                <br></br>
+
+                <fieldset className="form">
+                    <legend>BATCH</legend>
+                    <label htmlFor="name" />
+                    <input
+                        type="text"
+                        id="name"
+                        name="Batch"
+                        placeholder="Enter your batch"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
                 <br />
-                <button className="btn" onClick={() => Navi("/student")}>
-                    Cancel
-                </button>
-                <button className="btn2" onClick={handleClick}>
-                    Update
-                </button>
+                <br />
+
+                <div className="buttn">
+                    <button className="btn1" onClick={() => Navi("/student")}>
+                        Cancel
+                    </button>
+                    <button className="btn2" onClick={handleClick}>
+                        Update
+                    </button>
+                </div>
             </form>
         </>
     );

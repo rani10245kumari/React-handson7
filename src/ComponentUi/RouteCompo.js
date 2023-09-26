@@ -11,9 +11,11 @@ const RouteCompo = () => {
         <>
 
             <BrowserRouter>
-                <NavLink to='/'>Home</NavLink>
-                <NavLink to='/Student'>Student</NavLink>
-                <NavLink to='/Contact'>Contact</NavLink>
+                <div className='mainpage'>
+                    <NavLink to='/' className='common'>Home</NavLink>
+                    <NavLink to='/Student' className='common'>Student</NavLink>
+                    <NavLink to='/Contact' className='common'>Contact</NavLink>
+                </div>
                 <Routes>
                     <Route path='/' element={<Home />}></Route>
                     <Route path='/Student' element={<Student />}></Route>

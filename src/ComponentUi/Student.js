@@ -8,15 +8,16 @@ const Student = () => {
     const Navi = useNavigate()
     return (
         <>
-            <h1>STUDENT PAGE</h1>
-            <button onClick={() => Navi('/AddSTUDENT')}>ADD NEW STUDENT</button>
-            <table border={2}>
+            <h1 className="head">Student Page</h1>
+            <button onClick={() => Navi('/AddSTUDENT')} className="ADDBUTTON">ADD NEW STUDENT</button>
+            <table border={2} className="tabled">
                 <thead>
                     <tr>
                         <th>NAME</th>
                         <th>AGE</th>
                         <th>BATCH</th>
                         <th>Course</th>
+                        <th>Change</th>
                     </tr>
                 </thead>
                 <tbody>

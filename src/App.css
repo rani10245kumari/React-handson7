@@ -1,38 +1,130 @@
 .App {
+
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(243, 191, 200);
+}
+
+.head {
+  color: rgb(1, 34, 34);
+  font-size: 45px;
+  text-shadow: 3px 3px gainsboro;
+}
+
+.heading {
   text-align: center;
+  color: rgb(1, 34, 34);
+  font-size: 45px;
+  text-shadow: 3px 3px gainsboro;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mainpage {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  height: 15vh;
+  background-color: rgb(200, 161, 236);
 }
 
-.App-link {
-  color: #61dafb;
+.common {
+
+  text-decoration: none;
+  font-size: 40px;
+  text-shadow: 2px 2px violet;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ADDBUTTON {
+  position: absolute;
+  top: 25vh;
+  left: 70vw;
+  height: 10vh;
+  width: 25vw;
+  background-color: rgb(128, 107, 148);
+  border: 2px solid blueviolet;
+  border-radius: 20px;
+  color: rgb(244, 241, 247);
+  font-size: 20px;
+}
+
+.tabled {
+  height: 50vh;
+  width: 70vw;
+  margin: auto;
+  background-color: rgb(176, 233, 225);
+  border-color: rgb(3, 44, 56);
+}
+
+th {
+  color: rgb(7, 107, 114);
+  font-size: 20px;
+}
+
+td {
+  color: rgb(2, 46, 39);
+  font-size: 18px;
+}
+
+.Addtable {
+  position: absolute;
+  left: 15%;
+  top: 40vh;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 250px;
+  width: 750px;
+}
+
+.form {
+  height: 52px;
+  width: 280px;
+  font-size: 26px;
+  color: rgb(59, 2, 65);
+  border: 2px solid rgb(8, 8, 65);
+  border-radius: 10px;
+  background-color: thistle;
+}
+
+.form input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  font-size: 25px;
+  border: 0px dotted transparent;
+  text-align: center;
+  position: relative;
+}
+
+
+.buttn {
+
+  width: 400px;
+  position: absolute;
+  top: 260px;
+  left: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.btn1 {
+  height: 40px;
+  width: 180px;
+  font-size: 22px;
+  border: 2px solid rgb(3, 14, 44);
+  border-radius: 20px;
+  color: rgb(82, 4, 85);
+  background-color: rgb(236, 157, 236);
+}
+
+.btn2 {
+  height: 40px;
+  width: 180px;
+  font-size: 22px;
+  border: 2px solid rgb(3, 14, 44);
+  border-radius: 20px;
+  color: rgb(82, 4, 85);
+  background-color: rgb(236, 157, 236);
 }

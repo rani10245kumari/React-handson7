@@ -27,71 +27,73 @@ const NewStudent = () => {
 
     return (
         <>
-            <h1>Add new Student</h1>
-            <form>
-                <table className="table1">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label htmlFor="name">Name:</label>
-                            </td>
-                            <td>
-                                <input
-                                    type="text"
-                                    placeholder="Enter Name"
-                                    name="name"
-                                    onChange={handleChange}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label htmlFor="age">Age:</label>
-                            </td>
-                            <td>
-                                <input
-                                    type="number"
-                                    placeholder="Enter Age"
-                                    name="age"
-                                    onChange={handleChange}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label htmlFor="course">Course:</label>
-                            </td>
-                            <td>
-                                <input
-                                    type="text"
-                                    placeholder="Enter Course"
-                                    name="course"
-                                    onChange={handleChange}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label htmlFor="batch">Batch:</label>
-                            </td>
-                            <td>
-                                <input
-                                    type="text"
-                                    placeholder="Enter batch"
-                                    name="batch"
-                                    onChange={handleChange}
-                                />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h1 className='heading'>Add new Student</h1>
+            <form className="Addtable">
+
+
+                <fieldset className="form">
+                    <legend>NAME</legend>
+                    <label htmlFor="name" />
+                    <input
+                        type="text"
+                        id="name"
+                        name="Name"
+                        placeholder="Enter your name"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
+                <br></br>
+
+                <fieldset className="form">
+                    <legend>AGE</legend>
+                    <label htmlFor="age" />
+                    <input
+                        type="number"
+                        id="age"
+                        name="Age"
+                        placeholder="Enter your age"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
+                <br></br>
+                <fieldset className="form">
+                    <legend>COURSE</legend>
+                    <label htmlFor="name" />
+                    <input
+
+                        type="text"
+                        id="name"
+                        name="Course"
+                        placeholder="Enter your course"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
+                <br></br>
+
+                <fieldset className="form">
+                    <legend>BATCH</legend>
+                    <label htmlFor="name" />
+                    <input
+                        type="text"
+                        id="name"
+                        name="Batch"
+                        placeholder="Enter your batch"
+                        onChange={handleChange}
+                    />
+                </fieldset>
+                <br></br>
                 <br />
-                <button className="btn" onClick={() => Navi("/Student")}>
-                    Cancel
-                </button>
-                <button className="btn2" onClick={handleClick}>
-                    Add Student
-                </button>
+                <div className="buttn">
+                    <button className="btn1" onClick={() => Navi("/Student")}>
+                        Cancel
+                    </button>
+                    <button className="btn2" onClick={handleClick}>
+                        Add Student
+                    </button>
+                </div>
             </form>
             <NavLink to="/newStudent"></NavLink>
         </>
