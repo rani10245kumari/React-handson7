@@ -4,7 +4,7 @@ import Student from './Student';
 import Contact from './Contact';
 import Home from './Home';
 import EditStudent from './EditStudent'
-
+import NewStudent from "./AddStudent"
 
 const RouteCompo = () => {
     return (
@@ -18,7 +18,8 @@ const RouteCompo = () => {
                     <Route path='/' element={<Home />}></Route>
                     <Route path='/Student' element={<Student />}></Route>
                     <Route path='/Contact' element={<Contact />}></Route>
-                    <Route path='/EditStuent' element={<EditStudent />}></Route>
+                    <Route path='/EditStudent' element={<EditStudent />}></Route>
+                    <Route path="/AddStudent" element={<NewStudent />}></Route>
                 </Routes>
             </BrowserRouter>
         </>

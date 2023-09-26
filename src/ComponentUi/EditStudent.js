@@ -1,44 +1,95 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom"
-import { editStudent } from '../SLICE/slice'
-
+import { useLocation, useNavigate } from "react-router-dom";
+import { editStudent } from "../SLICE/slice";
 
 const EditStudent = () => {
-
     const index = useLocation().state.index;
-    const dispatch = useDispatch();
     const data = useSelector((state) => state.Stu_Data);
+    console.log(index);
     const Navi = useNavigate();
+    const dispatch = useDispatch();
     const [info, setInfo] = useState({
-        name: "",
-        age: '',
-        course: '',
-        batch: ''
+        name: data[index].name,
+        age: data[index].age,
+        course: data[index].course,
+        batch: data[index].batch,
+    });
 
-    })
-    const handelChange = (e) => {
-        setInfo({ ...info, [e.target.name]: e.target.value })
-    }
-    const handelClick = () => {
-        dispatch(editStudent({ info }))
+    const handleChange = (e) => {
+        setInfo({ ...info, [e.target.name]: e.target.value });
+    };
+
+    const handleClick = () => {
+        dispatch(editStudent({ info, index }));
+        Navi("/Student");
         console.log(info);
-    }
+        console.log(index);
+    };
 
     return (
         <>
-            <h1>THIS IS EDIT STUDENT COMPONENT</h1>
-            <label>NAME</label>
-            <input placeholder="ENter Nmae" name="name" onChange={handelChange}></input><br></br>
-            <label>AGE</label>
-            <input placeholder="ENter AGE" name="age" onChange={handelChange}></input><br></br>
-            <label>COURSE</label>
-            <input placeholder="ENter Course" name="course" onChange={handelChange}></input><br></br>
-            <label>BATCH</label>
-            <input placeholder="ENter Batch" name="batch" onChange={handelChange}></input><br></br>
-
+            <form>
+                <table className="table1">
+                    <tr>
+                        <td>
+                            <label For="name">Name:</label>
+                        </td>
+                        <td>
+                            <input
+                                placeholder="Enter Name"
+                                name="name"
+                                onChange={handleChange}
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label For="age">Age:</label>
+                        </td>
+                        <td>
+                            <input
+                                placeholder="Enter age"
+                                name="age"
+                                onChange={handleChange}
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label For="course">Course:</label>
+                        </td>
+                        <td>
+                            <input
+                                placeholder="Enter Course"
+                                name="course"
+                                onChange={handleChange}
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label For="batch">Batch:</label>
+                        </td>
+                        <td>
+                            <input
+                                placeholder="Enter batch"
+                                name="batch"
+                                onChange={handleChange}
+                            />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <button className="btn" onClick={() => Navi("/student")}>
+                    Cancel
+                </button>
+                <button className="btn2" onClick={handleClick}>
+                    Update
+                </button>
+            </form>
         </>
-    )
+    );
+};
 
-}
-export default EditStudent
+export default EditStudent;
